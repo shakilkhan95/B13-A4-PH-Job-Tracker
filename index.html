@@ -26,7 +26,41 @@
 
     <title>Job Tracker</title>
 </head>
-<body>
-    <h1>hello tailwind</h1>
+<body class="bg-[#F8FAFC] py-6">
+    <header class="w-10/12 mx-auto space-y-5">
+        <h1 class="text-2xl md:text-3xl font-bold text-[#002C5C]">Job Application Tracker</h1>
+
+        <!-- all counters section  -->
+        <section id="counters-container" class="counters-container grid grid-cols-3 gap-5">
+            <!-- Total counter section  -->
+            <div id="total-counter-container" class="bg-[#F1F2F4] rounded-lg p-4 hover:border border-[#002C5C]">
+                <p class="text-[#323B49] text-sm font-medium mb-1">Total</p>
+                <h4  id="total-counter-number" class="text-2xl text-[#002C5C] font-bold">0</h4> 
+            </div>
+
+            <!-- Interview counter section  -->
+            <div id="interview-counter-container" class="bg-[#F1F2F4] rounded-lg p-4 hover:border border-[#10B981]">
+                <p class="text-[#323B49] text-sm font-medium mb-1">Interview</p>
+                <h4 id="interview-counter-number" class="text-2xl text-[#10B981] font-bold">0</h4>
+            </div>
+
+            <!-- Rejected counter section  -->
+            <div id="rejected-counter-container" class="bg-[#F1F2F4] rounded-lg p-4 hover:border border-[#EF4444]">
+                <p class="text-[#323B49] text-sm font-medium mb-1">Rejected</p>
+                <h4 id="rejected-counter-number" class="text-2xl text-[#EF4444] font-bold">0</h4>
+            </div>
+        </section>
+    </header>
+
+    <!-- available job section -->
+    <section id="available-job-section" class="available-job-section w-10/12 mx-auto mt-8">
+        <div class="flex justify-between" id="section-header">
+            <h3 class="text-xl font-semibold text-[#002C5C]">Available Jobs</h3>
+
+            <p class="font-medium text-[#64748B]"><span id="available-job-counter">0</span> jobs</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
