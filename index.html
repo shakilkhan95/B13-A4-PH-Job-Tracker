@@ -30,7 +30,7 @@
     <header class="w-10/12 mx-auto space-y-5">
         <h1 class="text-2xl md:text-3xl font-bold text-[#002C5C]">Job Application Tracker</h1>
 
-        <!-- all counters section  -->
+        <!-- counters section  -->
         <section id="counters-container" class="counters-container grid grid-cols-3 gap-5">
             <!-- Total counter section  -->
             <div id="total-counter-container" class="bg-[#F1F2F4] rounded-lg p-4 hover:border border-[#002C5C]">
@@ -54,12 +54,277 @@
 
     <!-- available job section -->
     <section id="available-job-section" class="available-job-section w-10/12 mx-auto mt-8">
-        <div class="flex justify-between" id="section-header">
+        <!-- Header and total jobs counter  -->
+        <section class="flex justify-between" id="section-header">
             <h3 class="text-xl font-semibold text-[#002C5C]">Available Jobs</h3>
 
             <p class="font-medium text-[#64748B]"><span id="available-job-counter">0</span> jobs</p>
-        </div>
+        </section>
+
+        <!-- tabs to navigate all interview and rejected section  -->
+        <section id="status-container" class="mt-5 space-x-5">
+            <!-- All status button  -->
+            <button type="button" id="all-status-btn" class="status-btn text-[#64748B] text-xs font-medium bg-[#FFFFFF] rounded-sm px-8 py-2.5 cursor-pointer selected">All</button>
+
+            <!-- Interview status button  -->
+            <button type="button" id="interview-status-btn"
+            class="status-btn text-[#64748B] text-xs font-medium bg-[#FFFFFF] rounded-sm px-8 py-2.5 cursor-pointer">Interview</button>
+
+            <!-- Rejected status button  -->
+            <button type="button" id="rejected-status-btn"
+            class="status-btn text-[#64748B] text-xs font-medium bg-[#FFFFFF] rounded-sm px-8 py-2.5 cursor-pointer">Rejected</button>
+        </section>
+        
+        <!-- all jobs section  -->
+        <section id="jobs-container" class="jobs-container mt-8 space-y-8">
+
+            <!-- jobs card  -->
+            <div class="card bg-base-100 w-96 shadow-sm transition-all hover:scale-y-105 jobs-card">
+                <div class="card-body">
+                    <div class="flex justify-between items-center card-header">
+                        <h2 class="card-title text-lg font-semibold text-[#002C5C]">Mobile First Corp</h2>
+
+                        <span class="p-2 bg-[#F8FAFC] rounded-full cursor-pointer text-[#64748B] delete-btn"><i class="fa-solid fa-trash"></i></span>
+                    </div>
+                    <p class="text-[#64748B]">React Native Developer</p>
+                    <p>Remote • Full-time • $130,000 - $175,000</p>
+
+                    <button class="btn w-36 my-5 cursor-default updated-status text-sm w- font-medium text-[#002C5C] px-5 py-3 bg-[#EEF4FF] border border-[#002C5C]">NOT APPLIED</button>
+
+                    <p class="text-[#64748B]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <div class="mt-2.5 space-x-2 jobs-card-btn-group">
+                        <!-- interview button  -->
+                        <button class="btn text-[#10B981] text-sm font-semibold border-2 border-[#10B981] hover:text-white hover:bg-[#10B981] card-btn-interview">INTERVIEW</button>
+
+                        <!-- rejected button  -->
+                        <button
+                        class="btn text-[#EF4444] text-sm font-semibold border-2 border-[#EF4444] hover:text-white hover:bg-[#EF4444] card-btn-rejected">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- jobs card  -->
+            <div class="card bg-base-100 w-96 shadow-sm transition-all hover:scale-y-105 jobs-card">
+                <div class="card-body">
+                    <div class="flex justify-between items-center card-header">
+                        <h2 class="card-title text-lg font-semibold text-[#002C5C]">WebFlow Agency</h2>
+            
+                        <span class="p-2 bg-[#F8FAFC] rounded-full cursor-pointer text-[#64748B] delete-btn"><i
+                                class="fa-solid fa-trash"></i></span>
+                    </div>
+                    <p class="text-[#64748B]">Web Designer & Developer</p>
+                    <p>Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+            
+                    <button
+                        class="btn w-36 my-5 cursor-default updated-status text-sm w- font-medium text-[#002C5C] px-5 py-3 bg-[#EEF4FF] border border-[#002C5C]">NOT
+                        APPLIED</button>
+            
+                    <p class="text-[#64748B]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design
+                    trends.</p>
+                    <div class="mt-2.5 space-x-2 jobs-card-btn-group">
+                        <!-- interview button  -->
+                        <button
+                            class="btn text-[#10B981] text-sm font-semibold border-2 border-[#10B981] hover:text-white hover:bg-[#10B981] card-btn-interview">INTERVIEW</button>
+            
+                        <!-- rejected button  -->
+                        <button
+                            class="btn text-[#EF4444] text-sm font-semibold border-2 border-[#EF4444] hover:text-white hover:bg-[#EF4444] card-btn-rejected">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- jobs card  -->
+            <div class="card bg-base-100 w-96 shadow-sm transition-all hover:scale-y-105 jobs-card">
+                <div class="card-body">
+                    <div class="flex justify-between items-center card-header">
+                        <h2 class="card-title text-lg font-semibold text-[#002C5C]">DataViz Solutions</h2>
+            
+                        <span class="p-2 bg-[#F8FAFC] rounded-full cursor-pointer text-[#64748B] delete-btn"><i
+                                class="fa-solid fa-trash"></i></span>
+                    </div>
+                    <p class="text-[#64748B]">Data Visualization Specialist</p>
+                    <p>Boston, MA • Full-time • $125,000 - $165,000</p>
+            
+                    <button
+                        class="btn w-36 my-5 cursor-default updated-status text-sm w- font-medium text-[#002C5C] px-5 py-3 bg-[#EEF4FF] border border-[#002C5C]">NOT
+                        APPLIED</button>
+            
+                    <p class="text-[#64748B]">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                    <div class="mt-2.5 space-x-2 jobs-card-btn-group">
+                        <!-- interview button  -->
+                        <button
+                            class="btn text-[#10B981] text-sm font-semibold border-2 border-[#10B981] hover:text-white hover:bg-[#10B981] card-btn-interview">INTERVIEW</button>
+            
+                        <!-- rejected button  -->
+                        <button
+                            class="btn text-[#EF4444] text-sm font-semibold border-2 border-[#EF4444] hover:text-white hover:bg-[#EF4444] card-btn-rejected">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- jobs card  -->
+            <div class="card bg-base-100 w-96 shadow-sm transition-all hover:scale-y-105 jobs-card">
+                <div class="card-body">
+                    <div class="flex justify-between items-center card-header">
+                        <h2 class="card-title text-lg font-semibold text-[#002C5C]">CloudFirst Inc</h2>
+            
+                        <span class="p-2 bg-[#F8FAFC] rounded-full cursor-pointer text-[#64748B] delete-btn"><i
+                                class="fa-solid fa-trash"></i></span>
+                    </div>
+                    <p class="text-[#64748B]">Backend Developer</p>
+                    <p>Seattle, WA • Full-time • $140,000 - $190,000</p>
+            
+                    <button
+                        class="btn w-36 my-5 cursor-default updated-status text-sm w- font-medium text-[#002C5C] px-5 py-3 bg-[#EEF4FF] border border-[#002C5C]">NOT
+                        APPLIED</button>
+            
+                    <p class="text-[#64748B]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud
+                    infrastructure.</p>
+                    <div class="mt-2.5 space-x-2 jobs-card-btn-group">
+                        <!-- interview button  -->
+                        <button
+                            class="btn text-[#10B981] text-sm font-semibold border-2 border-[#10B981] hover:text-white hover:bg-[#10B981] card-btn-interview">INTERVIEW</button>
+            
+                        <!-- rejected button  -->
+                        <button
+                            class="btn text-[#EF4444] text-sm font-semibold border-2 border-[#EF4444] hover:text-white hover:bg-[#EF4444] card-btn-rejected">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- jobs card  -->
+            <div class="card bg-base-100 w-96 shadow-sm transition-all hover:scale-y-105 jobs-card">
+                <div class="card-body">
+                    <div class="flex justify-between items-center card-header">
+                        <h2 class="card-title text-lg font-semibold text-[#002C5C]">Innovation Labs</h2>
+            
+                        <span class="p-2 bg-[#F8FAFC] rounded-full cursor-pointer text-[#64748B] delete-btn"><i
+                                class="fa-solid fa-trash"></i></span>
+                    </div>
+                    <p class="text-[#64748B]">UI/UX Engineer</p>
+                    <p>Austin, TX • Full-time • $110,000 - $150,000</p>
+            
+                    <button
+                        class="btn w-36 my-5 cursor-default updated-status text-sm w- font-medium text-[#002C5C] px-5 py-3 bg-[#EEF4FF] border border-[#002C5C]">NOT
+                        APPLIED</button>
+            
+                    <p class="text-[#64748B]">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development
+                    expertise required.</p>
+                    <div class="mt-2.5 space-x-2 jobs-card-btn-group">
+                        <!-- interview button  -->
+                        <button
+                            class="btn text-[#10B981] text-sm font-semibold border-2 border-[#10B981] hover:text-white hover:bg-[#10B981] card-btn-interview">INTERVIEW</button>
+            
+                        <!-- rejected button  -->
+                        <button
+                            class="btn text-[#EF4444] text-sm font-semibold border-2 border-[#EF4444] hover:text-white hover:bg-[#EF4444] card-btn-rejected">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- jobs card  -->
+            <div class="card bg-base-100 w-96 shadow-sm transition-all hover:scale-y-105 jobs-card">
+                <div class="card-body">
+                    <div class="flex justify-between items-center card-header">
+                        <h2 class="card-title text-lg font-semibold text-[#002C5C]">MegaCorp Solutions</h2>
+            
+                        <span class="p-2 bg-[#F8FAFC] rounded-full cursor-pointer text-[#64748B] delete-btn"><i
+                                class="fa-solid fa-trash"></i></span>
+                    </div>
+                    <p class="text-[#64748B]">JavaScript Developer</p>
+                    <p>New York, NY • Full-time • $130,000 - $170,00</p>
+            
+                    <button
+                        class="btn w-36 my-5 cursor-default updated-status text-sm w- font-medium text-[#002C5C] px-5 py-3 bg-[#EEF4FF] border border-[#002C5C]">NOT
+                        APPLIED</button>
+            
+                    <p class="text-[#64748B]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health
+                    insurance, and professional development opportunities.</p>
+                    <div class="mt-2.5 space-x-2 jobs-card-btn-group">
+                        <!-- interview button  -->
+                        <button
+                            class="btn text-[#10B981] text-sm font-semibold border-2 border-[#10B981] hover:text-white hover:bg-[#10B981] card-btn-interview">INTERVIEW</button>
+            
+                        <!-- rejected button  -->
+                        <button
+                            class="btn text-[#EF4444] text-sm font-semibold border-2 border-[#EF4444] hover:text-white hover:bg-[#EF4444] card-btn-rejected">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- jobs card  -->
+            <div class="card bg-base-100 w-96 shadow-sm transition-all hover:scale-y-105 jobs-card">
+                <div class="card-body">
+                    <div class="flex justify-between items-center card-header">
+                        <h2 class="card-title text-lg font-semibold text-[#002C5C]">StartupXYZ</h2>
+            
+                        <span class="p-2 bg-[#F8FAFC] rounded-full cursor-pointer text-[#64748B] delete-btn"><i
+                                class="fa-solid fa-trash"></i></span>
+                    </div>
+                    <p class="text-[#64748B]">Full Stack Engineer</p>
+                    <p>Remote • Full-time • $120,000 - $160,000</p>
+            
+                    <button
+                        class="btn w-36 my-5 cursor-default updated-status text-sm w- font-medium text-[#002C5C] px-5 py-3 bg-[#EEF4FF] border border-[#002C5C]">NOT
+                        APPLIED</button>
+            
+                    <p class="text-[#64748B]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits
+                    and equity package included.</p>
+                    <div class="mt-2.5 space-x-2 jobs-card-btn-group">
+                        <!-- interview button  -->
+                        <button
+                            class="btn text-[#10B981] text-sm font-semibold border-2 border-[#10B981] hover:text-white hover:bg-[#10B981] card-btn-interview">INTERVIEW</button>
+            
+                        <!-- rejected button  -->
+                        <button
+                            class="btn text-[#EF4444] text-sm font-semibold border-2 border-[#EF4444] hover:text-white hover:bg-[#EF4444] card-btn-rejected">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- jobs card  -->
+            <div class="card bg-base-100 w-96 shadow-sm transition-all hover:scale-y-105 jobs-card">
+                <div class="card-body">
+                    <div class="flex justify-between items-center card-header">
+                        <h2 class="card-title text-lg font-semibold text-[#002C5C]">TechCorp Industries</h2>
+            
+                        <span class="p-2 bg-[#F8FAFC] rounded-full cursor-pointer text-[#64748B] delete-btn"><i
+                                class="fa-solid fa-trash"></i></span>
+                    </div>
+                    <p class="text-[#64748B]">Senior Frontend Developer</p>
+                    <p>San Francisco, CA • Full-time • $130,000 - $175,000</p>
+            
+                    <button
+                        class="btn w-36 my-5 cursor-default updated-status text-sm w- font-medium text-[#002C5C] px-5 py-3 bg-[#EEF4FF] border border-[#002C5C]">NOT
+                        APPLIED</button>
+            
+                    <p class="text-[#64748B]">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You
+                    will work with a talented team on cutting-edge projects.</p>
+                    <div class="mt-2.5 space-x-2 jobs-card-btn-group">
+                        <!-- interview button  -->
+                        <button
+                            class="btn text-[#10B981] text-sm font-semibold border-2 border-[#10B981] hover:text-white hover:bg-[#10B981] card-btn-interview">INTERVIEW</button>
+            
+                        <!-- rejected button  -->
+                        <button
+                            class="btn text-[#EF4444] text-sm font-semibold border-2 border-[#EF4444] hover:text-white hover:bg-[#EF4444] card-btn-rejected">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
     </section>
+
+    <!-- Updated status job section  -->
+     <section id="updated-status-job-container">
+        <div id="no-jobs-section" class="text-center justify-center py-28 hidden">
+            <div class="w-fit mx-auto">
+                <img src="./assets/jobs.png" alt="">
+            </div>
+            <h1 class="text-2xl text-[#002C5C] font-semibold my-2.5">No jobs available</h1>
+            <p class="text-[#64748B]">Check back soon for new job opportunities</p>
+        </div>
+     </section>
 
     <script src="script.js"></script>
 </body>

@@ -7,3 +7,12 @@
 * {
     font-family: "Geist", sans-serif;
 }
+
+/* status btn styles while selected  */
+.status-btn:hover,
+.selected{
+    background: linear-gradient(to left, #3B82F6, #EF4444);
+    color: #FFFFFF;
+}
+
+/* border-l-4 border-[#10B981] */
