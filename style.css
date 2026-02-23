@@ -13,4 +13,10 @@
     color: #FFFFFF;
 }
 
-/* border-l-4 border-[#10B981] */
+.interview-selected{
+    border-left: 8px solid #10B981;
+}
+
+.rejected-selected{
+    border-left: 8px solid #EF4444
+}
