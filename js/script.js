@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const deleteBtns = document.querySelectorAll(".delete-btn");
   const noJobsSection = document.getElementById("no-jobs-section");
   const allNavigationBtns = document.querySelectorAll(".status-btn");
+  const allStatusBtn = document.getElementById("all-status-btn");
+  const interviewStatusBtn = document.getElementById("interview-status-btn");
+  const rejectedStatusBtn = document.getElementById("rejected-status-btn");
   
   
 
@@ -72,24 +75,30 @@ document.addEventListener('DOMContentLoaded', function () {
       availableJobsCounter.innerHTML = `${allJobsCounter().length} of ${allJobsCounter().length}`;
 
       //toggle the no jobs section for all button
-      if (allJobsCounter().length !== 0) {
-        noJobsSection.classList.add("hidden");
-      } else {
-        noJobsSection.classList.remove("hidden");
+      if(allStatusBtn.classList.contains('selected')){
+        if (allJobsCounter().length !== 0) {
+          noJobsSection.classList.add("hidden");
+        } else {
+          noJobsSection.classList.remove("hidden");
+        }
       }
 
       //toggle the no jobs section for interview button
-      if (interviewJobsCounter().length !== 0) {
-        noJobsSection.classList.add("hidden");
-      } else {
-        noJobsSection.classList.remove("hidden");
+      if(interviewStatusBtn.classList.contains('selected')){
+        if (interviewJobsCounter().length !== 0) {
+          noJobsSection.classList.add("hidden");
+        } else {
+          noJobsSection.classList.remove("hidden");
+        }
       }
 
       //toggle the no jobs section for rejected button
-      if (rejectedJobsCounter().length !== 0) {
-        noJobsSection.classList.add("hidden");
-      } else {
-        noJobsSection.classList.remove("hidden");
+      if(rejectedStatusBtn.classList.contains('selected')){
+        if (rejectedJobsCounter().length !== 0) {
+          noJobsSection.classList.add("hidden");
+        } else {
+          noJobsSection.classList.remove("hidden");
+        }
       }
 
       //available jobs counter
@@ -128,6 +137,33 @@ document.addEventListener('DOMContentLoaded', function () {
       const rejectedBtn = document.getElementById("rejected-status-btn");
       if(rejectedBtn.classList.contains('selected')){
         clickedCard.classList.add('hidden');
+      }
+
+      //toggle the no jobs section for all button
+      if(allStatusBtn.classList.contains('selected')){
+        if (allJobsCounter().length !== 0) {
+          noJobsSection.classList.add("hidden");
+        } else {
+          noJobsSection.classList.remove("hidden");
+        }
+      }
+
+      //toggle the no jobs section for interview button
+      if(interviewStatusBtn.classList.contains('selected')){
+        if (interviewJobsCounter().length !== 0) {
+          noJobsSection.classList.add("hidden");
+        } else {
+          noJobsSection.classList.remove("hidden");
+        }
+      }
+
+      //toggle the no jobs section for rejected button
+      if(rejectedStatusBtn.classList.contains('selected')){
+        if (rejectedJobsCounter().length !== 0) {
+          noJobsSection.classList.add("hidden");
+        } else {
+          noJobsSection.classList.remove("hidden");
+        }
       }
 
       // re-render all counters 
@@ -169,6 +205,33 @@ document.addEventListener('DOMContentLoaded', function () {
       const interviewBtn = document.getElementById("interview-status-btn");
       if (interviewBtn.classList.contains("selected")) {
         clickedCard.classList.add("hidden");
+      }
+
+      //toggle the no jobs section for all button
+      if(allStatusBtn.classList.contains('selected')){
+        if (allJobsCounter().length !== 0) {
+          noJobsSection.classList.add("hidden");
+        } else {
+          noJobsSection.classList.remove("hidden");
+        }
+      }
+
+      //toggle the no jobs section for interview button
+      if(interviewStatusBtn.classList.contains('selected')){
+        if (interviewJobsCounter().length !== 0) {
+          noJobsSection.classList.add("hidden");
+        } else {
+          noJobsSection.classList.remove("hidden");
+        }
+      }
+
+      //toggle the no jobs section for rejected button
+      if(rejectedStatusBtn.classList.contains('selected')){
+        if (rejectedJobsCounter().length !== 0) {
+          noJobsSection.classList.add("hidden");
+        } else {
+          noJobsSection.classList.remove("hidden");
+        }
       }
 
       // re-render all counters
