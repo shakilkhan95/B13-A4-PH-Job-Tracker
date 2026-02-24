@@ -9,7 +9,7 @@
 /* status btn styles while selected  */
 .status-btn:hover,
 .selected{
-    background: linear-gradient(to left, #3B82F6, #EF4444);
+    background-color: #3B82F6;
     color: #FFFFFF;
 }
 
