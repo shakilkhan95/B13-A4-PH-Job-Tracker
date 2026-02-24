@@ -92,6 +92,16 @@ document.addEventListener('DOMContentLoaded', function () {
         noJobsSection.classList.remove("hidden");
       }
 
+      //available jobs counter
+      if(document.getElementById('interview-status-btn').classList.contains('selected')){
+        availableJobsCounter.innerHTML = `${interviewJobsCounter().length} of ${allJobsCounter().length}`;
+      }
+
+      //available jobs counter
+      if(document.getElementById('rejected-status-btn').classList.contains('selected')){
+        availableJobsCounter.innerHTML = `${rejectedJobsCounter().length} of ${allJobsCounter().length}`;
+      }
+
 
     })
   }
@@ -114,22 +124,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
 
+      // toggle card from rejected status to interview 
       const rejectedBtn = document.getElementById("rejected-status-btn");
       if(rejectedBtn.classList.contains('selected')){
         clickedCard.classList.add('hidden');
       }
 
-      // toggle the no jobs section
-        if (rejectedJobsCounter().length !== 0) {
-          noJobsSection.classList.add("hidden");
-        } else {
-          noJobsSection.classList.remove("hidden");
-        }
-
       // re-render all counters 
       totalCounterNumber.innerText = allJobsCounter().length;
       interviewCounterNumber.innerText = interviewJobsCounter().length;
       rejectedCounterNumber.innerText = rejectedJobsCounter().length;
+
+      //available jobs counter
+      if(document.getElementById('interview-status-btn').classList.contains('selected')){
+        availableJobsCounter.innerHTML = `${interviewJobsCounter().length} of ${allJobsCounter().length}`;
+      }
+
+      //available jobs counter
+      if(document.getElementById('rejected-status-btn').classList.contains('selected')){
+        availableJobsCounter.innerHTML = `${rejectedJobsCounter().length} of ${allJobsCounter().length}`;
+      }
     })
   }
 
@@ -151,22 +165,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
 
+      // toggle the card from interview status section to rejected 
       const interviewBtn = document.getElementById("interview-status-btn");
       if (interviewBtn.classList.contains("selected")) {
         clickedCard.classList.add("hidden");
-      }
-
-      // toggle the no jobs section
-      if (interviewJobsCounter().length !== 0) {
-        noJobsSection.classList.add("hidden");
-      } else {
-        noJobsSection.classList.remove("hidden");
       }
 
       // re-render all counters
       totalCounterNumber.innerText = allJobsCounter().length;
       interviewCounterNumber.innerText = interviewJobsCounter().length;
       rejectedCounterNumber.innerText = rejectedJobsCounter().length;
+
+      //available jobs counter
+      if(document.getElementById('interview-status-btn').classList.contains('selected')){
+        availableJobsCounter.innerHTML = `${interviewJobsCounter().length} of ${allJobsCounter().length}`;
+      }
+
+      //available jobs counter
+      if(document.getElementById('rejected-status-btn').classList.contains('selected')){
+        availableJobsCounter.innerHTML = `${rejectedJobsCounter().length} of ${allJobsCounter().length}`;
+      }
     });
   }
 
